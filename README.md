@@ -1,4 +1,4 @@
-custom-form-controls
+accessible-custom-form-controls
 ====================
 
-Custom Form Controls with full keyboard support and proper accessibility roles/attributes
+Accessible Custom Form Controls with full keyboard support and proper accessibility roles/attributes
