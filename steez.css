@@ -9,6 +9,7 @@ body {
 .label {
     display: inline-block;
     padding-left: 4px;
+    cursor: default;
 }
 
 .checkbox, .radio {

@@ -1,4 +1,14 @@
 
+// mimic functionality of clicking a
+// label with a proper for attribute
+$(document.body).on('click', '.label', function (e) {
+  var assocInput = $('[aria-labelledby="' + this.id + '"]')[0];
+
+  if (assocInput) {
+    assocInput.click();
+  }
+});
+
 $(document.body).on('click', '.checkbox', function (e) {
   var $target = $(this);
   var $icon = $target.find('i.fa').first();
@@ -76,5 +86,4 @@ function selectAdjacentRadio(radio, dir) {
 
   adjacentRadio.click();
   adjacentRadio.focus();
-
 }
