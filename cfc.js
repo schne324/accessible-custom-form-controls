@@ -78,6 +78,16 @@ $(document.body).on('touchstart', '.radio, .checkbox', function () {
   this.click();
 });
 
+// iOS support for clicking on labels to activate their form controls
+$(document.body).on('touchstart', '.label', function () {
+  var labelID = this.id;
+  var assocInput = labelID && $('[aria-labelledby="' + labelID + '"]');
+
+  if (assocInput) {
+    assocInput.click();
+  }
+});
+
 
 function selectAdjacentRadio(radio, dir) {
   var currentIndex = $.inArray(radio, $radios);
