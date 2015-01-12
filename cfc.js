@@ -24,6 +24,7 @@ $(document.body).on('click', '.checkbox', function (e) {
 });
 
 
+
 $(document.body).on('keydown', '.checkbox', function (e) {
   var which = e.which;
 
@@ -72,6 +73,10 @@ $(document.body).on('keydown', '.radio', function (keyVent) {
 
 });
 
+// iOS support for clicking on these 'non-natively clickable' elements
+$(document.body).on('touchstart', '.radio, .checkbox', function () {
+  this.click();
+});
 
 
 function selectAdjacentRadio(radio, dir) {
