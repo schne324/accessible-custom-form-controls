@@ -43,6 +43,15 @@ html
         div.radio(tabindex="-1", role="radio", aria-checked="false", aria-labelledby="radio-label-4")
           i.fa.fa-circle-o
         div.label#radio-label-4 Radio 4
+      div.switches
+        div.field
+          div.switch-cage
+            input(type="radio", name="on-off", value="on", id="switch-on", class="bg-input", checked)
+            label(for="switch-on") On
+            input(type="radio", name="on-off", value="off", id="switch-off", class="bg-input")
+            label(for="switch-off") Off
+            div.switch
+
 
       script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js")
       script(src="cfc.js")
